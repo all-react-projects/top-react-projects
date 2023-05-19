@@ -1,9 +1,15 @@
 import React from 'react'
 
-function Filter() {
+function Filter({filterData}) {
   return (
     <div>
-      filter
+       {
+        filterData.map((item)=>{
+            return <button>
+                {item.title}
+            </button>
+        })
+       }
     </div>
   )
 }
