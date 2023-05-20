@@ -33,14 +33,16 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App container">
        <Navbar/>
 
-       <Filter filterData={filterData}/>
-       
-      {
-        loading ? (<Spinner/>):(<Cards courses={courses}/>)  //loading=true then show spinner if false then show Card
-      }
+       <div style={{backgroundColor:'#394867'}}>
+          <Filter filterData={filterData}/>
+          
+          {
+            loading ? (<Spinner/>):(<Cards courses={courses}/>)  //loading=true then show spinner if false then show Card
+          }
+       </div>
 
     </div>
   );

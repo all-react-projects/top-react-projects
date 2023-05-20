@@ -1,0 +1,30 @@
+.card{
+    width: 320px;
+    height: 460px;
+    overflow: hidden;
+    border-radius: 4%;
+    opacity: 0.9;
+    display: flex;
+    margin: 20px;
+    box-shadow: 2px 2px 4px 2px;
+    color: white;
+}
+
+.card img{
+    width: 320px;
+    height: 200px;
+}
+
+
+.like button{
+    position: absolute;
+    left: 260px;
+    top: 185px;
+    border-radius: 50%;
+    height: 40px;
+}
+
+.detail{
+    margin-top: 20px;
+    text-align: center;
+}

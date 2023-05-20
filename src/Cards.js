@@ -1,5 +1,6 @@
 import React from 'react'
 import Card from './Card'
+import './Cards.css'
 
 function Cards({courses}) {
 
@@ -17,9 +18,8 @@ let getCourses=()=>{
 }
 
   return (
-    <div>
+    <div className='cards'>
         {
-            
             getCourses().map((course) => {
               return  <Card key={course.id} course={course}/>
             })
@@ -29,3 +29,4 @@ let getCourses=()=>{
 }
 
 export default Cards
+

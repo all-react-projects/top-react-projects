@@ -1,0 +1,13 @@
+.filter-buttons{
+    text-align: center;
+    /* margin: 10px; */
+}
+
+.filter-buttons button{
+    text-align: center;
+    margin: 8px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 10%;
+}
