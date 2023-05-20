@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from './Card'
 import './Cards.css'
 
 function Cards({courses}) {
+
+  const [likedCourses, setLikedCourses] = useState([]);
 
 const allCourses=[];
 
@@ -21,7 +23,11 @@ let getCourses=()=>{
     <div className='cards'>
         {
             getCourses().map((course) => {
-              return  <Card key={course.id} course={course}/>
+              return  <Card 
+                        key={course.id} 
+                        course={course} 
+                        likedCourses={likedCourses}
+                        setLikedCourses={setLikedCourses}/>
             })
         }
     </div>
