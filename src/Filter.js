@@ -14,7 +14,11 @@ function Filter(props) {
       <div className='filter-buttons'>
       {
         filterData.map((item)=>{
-            return <button key={item.id} onClick={()=>filterHandler(item.title)}>
+            return <button 
+                      className= {category===item.title ? "highlight-btn":"normal-btn"}
+                      key={item.id} 
+                      onClick={()=>filterHandler(item.title)}
+                      >
                 {item.title}
             </button>
         })
