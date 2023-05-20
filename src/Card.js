@@ -8,6 +8,7 @@ function Card(props) {
     const course=props.course;
     const likedCourses=props.likedCourses;
     const setLikedCourses=props.setLikedCourses;
+    
 
     function clickHandler(){
         if(likedCourses.includes(course.id)){   //already liked
@@ -34,7 +35,9 @@ function Card(props) {
             <div className='like'>
                 <button onClick={clickHandler}>
                     {
-                        likedCourses.includes(course.id)?(<FcLike fontSize="1.75rem"/>):(<FcLikePlaceholder fontSize="1.75rem"/>)
+                        likedCourses.includes(course.id)
+                        ?(<FcLike fontSize="1.75rem"/>)
+                        :(<FcLikePlaceholder fontSize="1.75rem"/>)
                     } 
                 </button>
             </div>

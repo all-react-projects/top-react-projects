@@ -2,21 +2,31 @@ import React, { useState } from 'react'
 import Card from './Card'
 import './Cards.css'
 
-function Cards({courses}) {
+function Cards(props) {
 
   const [likedCourses, setLikedCourses] = useState([]);
+  let courses=props.courses; //courses has 4 array
+  const category=props.category;
 
 const allCourses=[];
 
 //it returns a list of all courses received from api response
 let getCourses=()=>{
-    //convert all the json data into one array
-    Object.values(courses).forEach(array=>{
-        array.forEach((courseData)=>{
-            allCourses.push(courseData);    //insert each item into array
+
+    if(category==='All')
+    {
+            //convert all the json data into one array
+          Object.values(courses).forEach(array=>{
+            array.forEach((courseData)=>{
+                allCourses.push(courseData);    //insert each item into array
+            })
         })
-    })
-    return allCourses;
+        return allCourses;
+    }
+    else{
+      //main sirf specific category ka data pass/array krunga
+      return courses[category];   
+    }
 }
 
   return (

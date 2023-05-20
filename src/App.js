@@ -9,9 +9,10 @@ import Spinner from './Spinner';
 
 function App() {
   
-  const [courses, setCourses] = useState(null);
+  const [courses, setCourses] = useState([]);
   const [loading, setLoading] = useState(true);
-  
+  const [category, setCategory] = useState(filterData[0].title);//access title All of filter button
+
   async function fetchData(){
     setLoading(true);     //loading=true if data is coming
     try {
@@ -37,10 +38,10 @@ function App() {
        <Navbar/>
 
        <div style={{backgroundColor:'#394867'}}>
-          <Filter filterData={filterData}/>
+          <Filter filterData={filterData} category={category} setCategory={setCategory}/> {/*use of category in filter component so passing it*/}
           
           {
-            loading ? (<Spinner/>):(<Cards courses={courses}/>)  //loading=true then show spinner if false then show Card
+            loading ? (<Spinner/>):(<Cards courses={courses} category={category}/>)  //loading=true then show spinner if false then show Card
           }
        </div>
 

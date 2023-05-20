@@ -1,5 +1,6 @@
 .filter-buttons{
     text-align: center;
+    
     /* margin: 10px; */
 }
 
@@ -10,4 +11,5 @@
     background-color: black;
     color: white;
     border-radius: 10%;
+    border: 1px solid white;
 }
